@@ -222,26 +222,33 @@ body.dark-mode .photo-credit, body.dark-mode .photo-credit a {
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
     text-align: center;
-    padding: 40px 20px;
+    padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.affiliate-card h3 {
-    font-size: 1.8rem;
-    color: #28A745;
+.affiliate-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
     margin-bottom: 15px;
+}
+
+.affiliate-card h3 {
+    font-size: 1.5rem;
+    color: #28A745;
+    margin-bottom: 10px;
 }
 
 .affiliate-card p {
     font-size: 1rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     color: #555;
 }
 
 .affiliate-card a {
     background-color: #28A745;
     color: #fff;
-    padding: 10px 30px;
+    padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
