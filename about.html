@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - My Website</title>
+    <title>About - Healthy Living and Fitness</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- GA4 Tag (same as index.html) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -16,22 +15,52 @@
 </head>
 <body>
     <header>
-        <h1>About Us</h1>
+        <h1>About Healthy Living and Fitness</h1>
     </header>
+
     <nav>
-        <a href="index.html" onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Home' });">Home</a>
-        <a href="about.html" onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'About' });">About</a>
-        <a href="gallery.html" onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Gallery' });">Gallery</a>
-        <a href="contact.html" onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Contact' });">Contact</a>
-        <a href="affiliate.html" onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Affiliate' });">Affiliate</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="affiliate.html">Affiliate</a>
     </nav>
+
     <main>
-        <h2>Our Mission</h2>
-        <p>Here, explain what your website is about. Describe your mission and vision.</p>
+        <section class="about-mission">
+            <h2>Our Mission</h2>
+            <p>At Healthy Living and Fitness, our mission is to empower individuals to lead healthier, more fulfilling lives. We believe that a balanced approach to fitness, nutrition, and mental well-being is the foundation for long-term health and happiness.</p>
+        </section>
+
+        <section class="about-journey">
+            <h2>Our Journey</h2>
+            <p>Our journey began as a small group of fitness enthusiasts determined to break free from the limitations of a sedentary lifestyle. Over the years, we have grown into a vibrant community of like-minded individuals, united by a shared passion for health and wellness.</p>
+            <p>From weekend joggers to marathon runners, from first-time lifters to seasoned bodybuilders, our members come from all walks of life, each with their unique goals and challenges. What unites us is our commitment to personal growth, positivity, and the pursuit of a healthier tomorrow.</p>
+        </section>
+
+        <section class="core-values">
+            <h2>Our Core Values</h2>
+            <ul>
+                <li><strong>Community:</strong> We support each other through every challenge.</li>
+                <li><strong>Consistency:</strong> We believe that small, daily habits lead to long-term success.</li>
+                <li><strong>Positivity:</strong> We maintain a positive mindset, even on the toughest days.</li>
+                <li><strong>Growth:</strong> We strive for continuous improvement, both physically and mentally.</li>
+                <li><strong>Inspiration:</strong> We aim to inspire others to live their best lives.</li>
+            </ul>
+        </section>
+
+        <section class="call-to-action">
+            <h2>Ready to Begin Your Fitness Journey?</h2>
+            <p>Join us today and become part of a supportive, motivated community. Whether you’re just starting out or looking to take your fitness to the next level, we’re here to support you every step of the way.</p>
+            <button onclick="gtag('event', 'click', { event_category: 'callToAction', event_label: 'Join Now' });">Join Now</button>
+        </section>
     </main>
+
     <footer>
-        <p>&copy; 2025 My Website</p>
+        <p>&copy; 2025 Healthy Living and Fitness | Fuel Your Potential</p>
     </footer>
+
     <script src="final.js"></script>
 </body>
 </html>
