@@ -14,6 +14,19 @@ function setCookie(name, value, days = 7) {
     document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/`;
 }
 
+// Function to safely send GA4 events
+function trackGAEvent(eventName, eventCategory, eventLabel) {
+    if (typeof gtag === "function") {
+        gtag('event', eventName, {
+            event_category: eventCategory,
+            event_label: eventLabel
+        });
+        console.log(`Tracked GA4 Event: ${eventName} | Category: ${eventCategory} | Label: ${eventLabel}`);
+    } else {
+        console.warn("GA4 gtag function not found. Skipping event tracking.");
+    }
+}
+
 // Retrieve user data from cookies
 let userName = getCookie('name');
 let userTheme = getCookie('theme');
@@ -22,36 +35,21 @@ let userTheme = getCookie('theme');
 if (!userName) {
     userName = prompt("What's your name?") || "Guest";
     setCookie('name', userName);
-
-    // Track first-time user event in GA4
-    gtag('event', 'first_visit', {
-        event_category: 'user',
-        event_label: userName
-    });
+    trackGAEvent('first_visit', 'user', userName);
 }
 
 if (!userTheme) {
     const prefersDark = confirm("Do you prefer dark mode?");
     userTheme = prefersDark ? "dark" : "light";
     setCookie('theme', userTheme);
-
-    // Track theme choice event in GA4
-    gtag('event', 'theme_choice', {
-        event_category: 'user',
-        event_label: userTheme
-    });
+    trackGAEvent('theme_choice', 'user', userTheme);
 }
 
 // Apply personalized greeting
 const welcomeMessage = document.getElementById("welcome-message");
 if (welcomeMessage && userName) {
     welcomeMessage.textContent = `Welcome back, ${userName}! Let's crush those fitness goals! 💪`;
-
-    // Track return visit in GA4
-    gtag('event', 'return_visit', {
-        event_category: 'user',
-        event_label: userName
-    });
+    trackGAEvent('return_visit', 'user', userName);
 }
 
 // Apply the selected theme
@@ -80,10 +78,5 @@ themeToggleButton.addEventListener('click', () => {
     applyTheme(newTheme);
     themeToggleButton.textContent = newTheme === 'dark' ? "Switch to Light Mode" : "Switch to Dark Mode";
     userTheme = newTheme;
-
-    // Track theme switch in GA4
-    gtag('event', 'theme_switch', {
-        event_category: 'user',
-        event_label: newTheme
-    });
+    trackGAEvent('theme_switch', 'user', newTheme);
 });
