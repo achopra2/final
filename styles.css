@@ -104,6 +104,7 @@ button {
     cursor: pointer;
     border-radius: 5px;
     margin-top: 15px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -146,10 +147,11 @@ footer {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Updated Image Styles */
 .gallery-image {
     width: 100%;
-    height: auto;
     max-width: 350px;
+    height: auto;
     border-radius: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -203,19 +205,27 @@ body.dark-mode .photo-credit, body.dark-mode .photo-credit a {
     .gallery-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
+
+    .gallery h2 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-image {
+        max-width: 300px;
+    }
 }
 
 @media (max-width: 480px) {
-    body {
-        font-size: 16px;
+    .gallery-image {
+        max-width: 250px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
     }
 
     button {
         font-size: 1rem;
         padding: 10px 20px;
-    }
-
-    .gallery-image {
-        max-width: 300px;
     }
 }
