@@ -1,70 +1,134 @@
 /* styles.css - Healthy Living and Fitness (Extended) */
 
-/* Dark Mode Styles for Headers */
-body.dark-mode header h1, 
-body.dark-mode .intro, 
-body.dark-mode .features, 
-body.dark-mode .cta {
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F4F4F4;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
     color: #f1f1f1;
 }
 
-/* Dark Mode Styles for Forms */
-body.dark-mode form label {
-    color: #f1f1f1;
-}
-
-body.dark-mode form input, 
-body.dark-mode form textarea {
-    background-color: #2a2a2a;
-    color: #f1f1f1;
-    border: 1px solid #555;
-}
-
-/* Form Styles */
-form label {
-    font-weight: bold;
-    margin-top: 15px;
-    display: block;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Button Styles */
-.theme-toggle-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+/* Header Styles */
+header {
     background-color: #28A745;
     color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 9999;
-    transition: background-color 0.3s;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid #218838;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.theme-toggle-button:hover {
-    background-color: #218838;
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
-/* Dark Mode Styles for Theme Toggle Button */
-body.dark-mode .theme-toggle-button {
+/* Dark Mode for Header */
+body.dark-mode header {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    border-bottom: 5px solid #444;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #333;
+    text-align: center;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #28A745;
+}
+
+/* Dark Mode for Navigation */
+body.dark-mode nav {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode nav a {
+    color: #f1f1f1;
+}
+
+/* Main Content Styles */
+main {
+    width: 90%;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Styles for Main Content */
+body.dark-mode main {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+/* Banner Styles */
+.banner {
+    background-color: #28A745;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+body.dark-mode .banner {
     background-color: #444;
     color: #f1f1f1;
 }
 
-body.dark-mode .theme-toggle-button:hover {
-    background-color: #666;
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Enhanced CTA Styles */
+/* Dark Mode Styles for Footer */
+body.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+/* CTA Styles */
 .cta {
     text-align: center;
     margin: 40px auto;
@@ -90,22 +154,34 @@ body.dark-mode .cta {
     color: #f1f1f1;
 }
 
-body.dark-mode .cta button {
-    background-color: #666;
+/* Affiliate Card Styles */
+.affiliate-card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 40px 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.affiliate-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .affiliate-card {
+    background-color: #2a2a2a;
     color: #f1f1f1;
 }
 
-/* Dark Mode Styles for Photo Credits */
-body.dark-mode .photo-credit {
-    color: #bbb;
+/* Dark Mode Styles for Links */
+body.dark-mode a {
+    color: #90caf9;
 }
 
-body.dark-mode .photo-credit a {
-    color: #bbb;
-}
-
-body.dark-mode .photo-credit a:hover {
-    color: #f1f1f1;
+body.dark-mode a:hover {
+    color: #bbdefb;
 }
 
 /* Responsive Styles */
@@ -127,9 +203,8 @@ body.dark-mode .photo-credit a:hover {
         padding: 20px;
     }
 
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px;
+    .banner h2 {
+        font-size: 2rem;
     }
 }
 
@@ -143,20 +218,15 @@ body.dark-mode .photo-credit a:hover {
         padding: 10px 20px;
     }
 
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .intro-image {
-        max-width: 100%;
-        margin: 10px auto;
-    }
-
     .cta {
         padding: 20px 10px;
     }
 
     .affiliate-card {
         padding: 15px;
+    }
+
+    .banner h2 {
+        font-size: 1.8rem;
     }
 }
