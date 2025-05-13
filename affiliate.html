@@ -1,8 +1,66 @@
-<main>
-  <h2>Our Affiliates</h2>
-  <ul>
-    <li><a href="https://peer1website.com" onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Peer 1' });">Peer 1</a></li>
-    <li><a href="https://peer2website.com" onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Peer 2' });">Peer 2</a></li>
-    <li><a href="https://peer3website.com" onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Peer 3' });">Peer 3</a></li>
-  </ul>
-</main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate - Healthy Living and Fitness</title>
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Affiliate Partnerships</h1>
+        <p>Explore our trusted partners for exclusive health and fitness offers.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="affiliate.html">Affiliate</a>
+    </nav>
+
+    <main>
+        <section class="affiliate-banner">
+            <h2>Our Trusted Partners</h2>
+        </section>
+
+        <section class="affiliate-links">
+            <div class="affiliate-card">
+                <img src="images/partner1.jpg" alt="Partner 1">
+                <h3>Fitness Gear Pro</h3>
+                <p>Related Company</p>
+                <a href="https://example.com" target="_blank">Shop Now</a>
+            </div>
+
+            <div class="affiliate-card">
+                <img src="images/partner2.jpg" alt="Partner 2">
+                <h3>Healthy Eats</h3>
+                <p>Related Company</p>
+                <a href="https://example.com" target="_blank">Shop Now</a>
+            </div>
+
+            <div class="affiliate-card">
+                <img src="images/partner3.jpg" alt="Partner 3">
+                <h3>Mindful Living</h3>
+                <p>Related Company</p>
+                <a href="https://example.com" target="_blank">Shop Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Healthy Living and Fitness | Fuel Your Potential</p>
+    </footer>
+
+    <script src="final.js"></script>
+</body>
+</html>
