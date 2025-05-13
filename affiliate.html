@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Affiliate - Healthy Living and Fitness</title>
     <link rel="stylesheet" href="styles.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    
+    <!-- Google Analytics 4 Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PTR4C54NPZ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
+        gtag('config', 'G-PTR4C54NPZ');
     </script>
 </head>
 <body>
@@ -20,12 +22,12 @@
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-        <a href="affiliate.html">Affiliate</a>
+        <a href="index.html" onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Home' });">Home</a>
+        <a href="about.html" onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'About' });">About</a>
+        <a href="gallery.html" onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Gallery' });">Gallery</a>
+        <a href="blog.html" onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Blog' });">Blog</a>
+        <a href="contact.html" onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Contact' });">Contact</a>
+        <a href="affiliate.html" onclick="gtag('event', 'nav_click', { event_category: 'navigation', event_label: 'Affiliate' });">Affiliate</a>
     </nav>
 
     <main>
@@ -35,19 +37,18 @@
 
         <section class="affiliate-links">
             <div class="affiliate-card">
-
                 <p>Related Company</p>
-                <a href="https://example.com" target="_blank">Shop Now</a>
+                <a href="https://example.com" target="_blank" onclick="gtag('event', 'affiliate_click', { event_category: 'affiliate', event_label: 'Partner 1' });">Shop Now</a>
             </div>
 
             <div class="affiliate-card">
                 <p>Related Company</p>
-                <a href="https://example.com" target="_blank">Shop Now</a>
+                <a href="https://example.com" target="_blank" onclick="gtag('event', 'affiliate_click', { event_category: 'affiliate', event_label: 'Partner 2' });">Shop Now</a>
             </div>
 
             <div class="affiliate-card">
                 <p>Related Company</p>
-                <a href="https://example.com" target="_blank">Shop Now</a>
+                <a href="https://example.com" target="_blank" onclick="gtag('event', 'affiliate_click', { event_category: 'affiliate', event_label: 'Partner 3' });">Shop Now</a>
             </div>
         </section>
     </main>
