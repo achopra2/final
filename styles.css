@@ -43,7 +43,7 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     margin: 0 15px;
     font-size: 1.1rem;
@@ -53,11 +53,21 @@ nav a {
 
 /* Ensure nav links are visible in dark mode */
 body.dark-mode nav a {
-    color: #fff;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 body.light-mode nav a {
-    color: #333;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav a:hover {
@@ -155,7 +165,7 @@ form input, form textarea {
         font-size: 2rem;
     }
     nav a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     margin: 0 15px;
     font-size: 1.1rem;
@@ -165,11 +175,21 @@ form input, form textarea {
 
 /* Ensure nav links are visible in dark mode */
 body.dark-mode nav a {
-    color: #fff;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 body.light-mode nav a {
-    color: #333;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 }
 
