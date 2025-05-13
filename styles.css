@@ -33,6 +33,7 @@ form input, form textarea {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Button Styles */
@@ -47,21 +48,25 @@ form input, form textarea {
     border-radius: 5px;
     cursor: pointer;
     z-index: 9999;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .theme-toggle-button:hover {
     background-color: #218838;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 /* Dark Mode Styles for Theme Toggle Button */
 body.dark-mode .theme-toggle-button {
     background-color: #444;
     color: #f1f1f1;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
 body.dark-mode .theme-toggle-button:hover {
     background-color: #666;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.4);
 }
 
 /* Enhanced CTA Styles */
@@ -73,6 +78,7 @@ body.dark-mode .theme-toggle-button:hover {
     color: #fff;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .cta h2 {
@@ -88,6 +94,7 @@ body.dark-mode .theme-toggle-button:hover {
 body.dark-mode .cta {
     background-color: #444;
     color: #f1f1f1;
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
 }
 
 body.dark-mode .cta button {
@@ -131,6 +138,11 @@ body.dark-mode .photo-credit a:hover {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 15px;
     }
+
+    .theme-toggle-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -159,4 +171,20 @@ body.dark-mode .photo-credit a:hover {
     .affiliate-card {
         padding: 15px;
     }
+
+    .theme-toggle-button {
+        bottom: 10px;
+        right: 10px;
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Dark Mode Styles for Links */
+body.dark-mode a {
+    color: #90caf9;
+}
+
+body.dark-mode a:hover {
+    color: #bbdefb;
 }
