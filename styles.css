@@ -21,7 +21,10 @@ body.dark-mode {
     color: #f1f1f1;
 }
 
-body.dark-mode header h1, body.dark-mode .intro, body.dark-mode .features, body.dark-mode .cta {
+body.dark-mode header h1, 
+body.dark-mode .intro, 
+body.dark-mode .features, 
+body.dark-mode .cta {
     color: #f1f1f1;
 }
 
@@ -55,25 +58,6 @@ nav a {
     transition: color 0.3s;
 }
 
-/* Ensure nav links are visible in dark mode */
-body.dark-mode nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-body.light-mode nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
 nav a:hover {
     color: #28A745;
 }
@@ -93,6 +77,21 @@ main {
 body.dark-mode main {
     background-color: #1e1e1e;
     color: #f1f1f1;
+}
+
+/* Intro Image Styles */
+.intro-image {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Dark Mode Image Border */
+body.dark-mode .intro-image {
+    border: 2px solid #f1f1f1;
 }
 
 /* CTA Styles */
@@ -120,108 +119,17 @@ footer {
     margin-top: 30px;
 }
 
-/* Form Styles */
-form label {
-    font-weight: bold;
-    margin-top: 15px;
-    display: block;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Gallery Styles */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.gallery-grid img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* Blog Styles */
-.blog article {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #ccc;
-}
-
-.blog article h3 {
-    color: #28A745;
-}
-
-.blog article a {
-    color: #218838;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.blog article a:hover {
-    text-decoration: underline;
-}
-
 /* Responsive Styles */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
     }
-    nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-/* Ensure nav links are visible in dark mode */
-body.dark-mode nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-body.light-mode nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: color 0.3s;
-}
 }
 
 @media (max-width: 480px) {
     body {
-    font-family: Arial, sans-serif;
-    background-color: #F4F4F4;
-    color: #333;
-    line-height: 1.6;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #121212;
-    color: #f1f1f1;
-}
-
-body.dark-mode header h1, body.dark-mode .intro, body.dark-mode .features, body.dark-mode .cta {
-    color: #f1f1f1;
-}
+        font-size: 16px;
+    }
     button {
         font-size: 1rem;
         padding: 10px 20px;
