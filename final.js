@@ -22,18 +22,36 @@ let userTheme = getCookie('theme');
 if (!userName) {
     userName = prompt("What's your name?") || "Guest";
     setCookie('name', userName);
+
+    // Track first-time user event in GA4
+    gtag('event', 'first_visit', {
+        event_category: 'user',
+        event_label: userName
+    });
 }
 
 if (!userTheme) {
     const prefersDark = confirm("Do you prefer dark mode?");
     userTheme = prefersDark ? "dark" : "light";
     setCookie('theme', userTheme);
+
+    // Track theme choice event in GA4
+    gtag('event', 'theme_choice', {
+        event_category: 'user',
+        event_label: userTheme
+    });
 }
 
 // Apply personalized greeting
 const welcomeMessage = document.getElementById("welcome-message");
 if (welcomeMessage && userName) {
     welcomeMessage.textContent = `Welcome back, ${userName}! Let's crush those fitness goals! 💪`;
+
+    // Track return visit in GA4
+    gtag('event', 'return_visit', {
+        event_category: 'user',
+        event_label: userName
+    });
 }
 
 // Apply the selected theme
@@ -52,16 +70,7 @@ applyTheme(userTheme);
 // Add a theme toggle button for quick switching
 const themeToggleButton = document.createElement('button');
 themeToggleButton.textContent = userTheme === 'dark' ? "Switch to Light Mode" : "Switch to Dark Mode";
-themeToggleButton.style.position = 'fixed';
-themeToggleButton.style.bottom = '20px';
-themeToggleButton.style.right = '20px';
-themeToggleButton.style.backgroundColor = '#28A745';
-themeToggleButton.style.color = '#fff';
-themeToggleButton.style.border = 'none';
-themeToggleButton.style.padding = '10px 20px';
-themeToggleButton.style.borderRadius = '5px';
-themeToggleButton.style.cursor = 'pointer';
-themeToggleButton.style.zIndex = '9999';
+themeToggleButton.classList.add('theme-toggle-button');
 document.body.appendChild(themeToggleButton);
 
 // Handle theme switching
@@ -71,4 +80,10 @@ themeToggleButton.addEventListener('click', () => {
     applyTheme(newTheme);
     themeToggleButton.textContent = newTheme === 'dark' ? "Switch to Light Mode" : "Switch to Dark Mode";
     userTheme = newTheme;
+
+    // Track theme switch in GA4
+    gtag('event', 'theme_switch', {
+        event_category: 'user',
+        event_label: newTheme
+    });
 });
